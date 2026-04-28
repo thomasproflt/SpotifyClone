@@ -1,0 +1,106 @@
+@import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: "Google Sans", sans-serif;
+  background: black;
+  color: white;
+}
+
+/* Custom Spotify Range */
+.spotify-range {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 12px;
+}
+
+/* Trilho (Track) - O segredo está no background dinâmico */
+.spotify-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  /* Cria o efeito de preenchimento usando a variável CSS --progress */
+  background: linear-gradient(to right, #fff var(--progress), #4d4d4d var(--progress));
+}
+
+/* No Hover, a parte preenchida fica verde */
+.group-range:hover .spotify-range::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #1db954 var(--progress), #4d4d4d var(--progress));
+}
+
+/* Bolinha (Thumb) */
+.spotify-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-top: -4px;
+  opacity: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.group-range:hover .spotify-range::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+/* Firefox Support */
+.spotify-range::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(to right, #fff var(--progress), #4d4d4d var(--progress));
+}
+.group-range:hover .spotify-range::-moz-range-track {
+  background: linear-gradient(to right, #1db954 var(--progress), #4d4d4d var(--progress));
+}
+
+/* GLOBAL SCROLLBAR RESET */
+* {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ffffff27 transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* REMOVE COMPLETAMENTE OS BOTÕES (↑ ↓) */
+*::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* GARANTE REMOÇÃO EM TODOS OS ESTADOS */
+*::-webkit-scrollbar-button:start:decrement,
+*::-webkit-scrollbar-button:end:increment,
+*::-webkit-scrollbar-button:vertical:start:decrement,
+*::-webkit-scrollbar-button:vertical:end:increment {
+  display: none !important;
+}
+
+/* TRACK */
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* THUMB = "PROGRESSO" */
+*::-webkit-scrollbar-thumb {
+  background: #ffffff27;
+  border-radius: 10px;
+}
+
+/* HOVER */
+*::-webkit-scrollbar-thumb:hover {
+  background: #ffffff27;
+}
