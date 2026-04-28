@@ -74,7 +74,7 @@ const Carousel = ({ data, setCurrentMusic }) => {
                         <div key={item.id} className="min-w-[70%] sm:min-w-[45%] md:min-w-[20%] p-2 snap-start">
                             <div
                                 onClick={() => setCurrentMusic(item)}
-                                className="relative flex flex-col p-2 hover:bg-zinc-50/5 active:bg-zinc-50/5 rounded-md group transition cursor-pointer"
+                                className="relative flex flex-col p-2 hover:bg-zinc-50/5 rounded-md group transition cursor-pointer"
                             >
                                 <div className="w-full h-60 overflow-hidden rounded-md mb-3">
                                     <img
@@ -97,7 +97,7 @@ const Carousel = ({ data, setCurrentMusic }) => {
                                         e.stopPropagation()
                                         setCurrentMusic(item)
                                     }}
-                                    className="absolute right-2 bottom-2 px-3 py-2 bg-[#1ED760] text-black rounded-full opacity-0 group-hover:opacity-100 group-active:opacity-100 translate-y-2 group-hover:-translate-y-2 group-active:-translate-y-2 transition"
+                                    className="absolute right-2 bottom-2 px-3 py-2 bg-[#1ED760] text-black rounded-full opacity-0 group-hover:opacity-100 translate-y-2 group-hover:-translate-y-2 transition"
                                 >
                                     <i className="bi bi-play-fill"></i>
                                 </button>
