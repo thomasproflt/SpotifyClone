@@ -16,13 +16,13 @@ function App() {
   return (
     <div
       className={`h-screen grid ${hasPlayer
-          ? "grid-rows-[64px_1fr_80px]"
-          : "grid-rows-[64px_1fr]"
-        } ${collapsed 
-  ? "md:grid-cols-[80px_1fr]" 
-  : "md:grid-cols-[240px_1fr]"
-}
-grid-cols-1 bg-black`}
+        ? "grid-rows-[64px_1fr_60px]"
+        : "grid-rows-[64px_1fr]"
+        } ${collapsed
+          ? "md:grid-cols-[80px_1fr]"
+          : "md:grid-cols-[240px_1fr]"
+        }
+      grid-cols-1 bg-black`}
     >
       <div className="col-span-2">
         <Navbar toggleSidebar={() => setCollapsed(!collapsed)} />

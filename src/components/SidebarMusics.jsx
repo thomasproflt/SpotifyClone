@@ -3,7 +3,7 @@ import { Home, Search, Compass, PanelLeft } from "lucide-react"
 
 const SidebarMusics = ({ collapsed, toggle }) => {
     return (
-        <aside className="hidden md:flex h-full bg-black p-2">
+        <aside className="hidden md:block h-full bg-black p-2">
 
             <div className="bg-[#0E0E0E] rounded-xl p-3 h-full flex flex-col">
 

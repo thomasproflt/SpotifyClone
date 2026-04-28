@@ -73,7 +73,7 @@ const NowPlayingBar = ({ music }) => {
             {music && (
                 <motion.div
                     initial={{ y: 100 }} animate={{ y: 0 }} exit={{ y: 100 }}
-                    className="fixed md:static bottom-20 md:bottom-0 left-0 w-full bg-[#050505] px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between z-50"
+                    className="fixed md:static bottom-17 rounded-tl-lg rounded-tr-lg md:rounded-tl-none md:rounded-tr-none md:bottom-0 left-0 w-full bg-[#050505] px-4 py-3 flex flex-col md:flex-row md:items-center md:justify-between z-50"
                 >
                     <audio
                         ref={audioRef}
@@ -91,10 +91,10 @@ const NowPlayingBar = ({ music }) => {
                             <img src={music.image} className="w-12 h-12 md:w-14 md:h-14 rounded" alt="Capa" />
 
                             <div className="flex flex-col truncate">
-                                <span className="text-white text-sm font-medium truncate">
+                                <span className="text-white text-sm font-medium truncate w-45 md:w-60">
                                     {music.album}
                                 </span>
-                                <span className="text-zinc-400 text-[11px] truncate">
+                                <span className="text-zinc-400 text-[11px] truncate w-45 md:w-60">
                                     {music.band}
                                 </span>
                             </div>
